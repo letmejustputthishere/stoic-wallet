@@ -387,7 +387,8 @@ export default function NFTList(props) {
                     </SnackbarButton>
                   </TableCell>
                   <TableCell>
-                    <a href={getNftLink(nft)} target="_blank" rel="noreferrer" style={{display:'block'}}><object data={getNftImg(nft)} id={"img-"+nft.id} width="64" style={{pointerEvents:'none'}}>{compressAddress(nft.id)}</object></a>
+                    {/* <a href={getNftLink(nft)} target="_blank" rel="noreferrer" style={{display:'block'}}><object data={getNftImg(nft)} id={"img-"+nft.id} width="64" style={{pointerEvents:'none'}}>{compressAddress(nft.id)}</object></a> */}
+                    <a href={getNftLink(nft)} target="_blank" rel="noreferrer" style={{display:'block'}}><iframe style={{pointerEvents:'none',border:'0'}} src={getNftImg(nft)} id={"img-"+nft.id} title={nft.id} width="64">{compressAddress(nft.id)}</iframe></a>
                   </TableCell>
                   <TableCell>
                     
